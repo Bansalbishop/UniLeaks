@@ -1,0 +1,172 @@
+* {
+    background-color: rgb(35, 35, 35);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+:root {
+    --pri-color: rgb(23, 0, 170);
+
+}
+
+#selectedlft{
+    /* background-color: rgb(23, 0, 170); */
+    cursor: pointer;
+    background-color: var(--pri-color);
+    border-radius: 10px;
+    border-left: 5px solid white;
+}
+
+
+body {
+    display: flex;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+
+}
+
+.left-main {
+    position: fixed;
+    background-color: black;
+    /* padding: auto; */
+    width: 80px;
+    height: 100vh;
+    border-radius: 15px;
+    border-right: 2px solid rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    background-color: transparent;
+    /* margin: auto; */
+
+
+
+}
+
+.logohr {
+    margin-inline: 15px;
+
+}
+
+.buttonlist {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pic {
+    background-color: transparent;
+    margin-left: 2px;
+    /* margin-top: 100px; */
+
+}
+
+.buttonleft {
+    width: 80px;
+    margin-block: 10px;
+    background-color: transparent;
+    padding: auto;
+}
+
+.buttonleft {
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    height: 70px;
+    transition: 0.5s;
+
+}
+
+.buttonlef {
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    /* background: linear-gradient(to right rgba(0, 0, 0, 0),black); */
+    height: 70px;
+    transition: 0.5s;
+
+}
+
+.imgleft:hover {
+    background-color: black;
+}
+
+.buttonlef:hover {
+    /* background-color: rgb(23, 0, 170); */
+    background-color: var(--pri-color);
+    cursor: pointer;
+    border-radius: 10px;
+    border-left: 5px solid white;
+    /* background: linear-gradient(to right, rgba(0,0,0,0),rgba(32, 0, 254, 1), rgba(0, 0, 0, 0)); */
+    /* background-color: linear-gradient(rgb(32,0,254,255,rgba(225, 217, 217, 0))); */
+}
+
+.rytbutton button {
+    border: none;
+    background-color: gray;
+    padding: px;
+    border-radius: 20px;
+    padding-inline: 25px;
+    padding-block: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-left: 100px;
+}
+
+.buttons {
+    background-color: grey;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+
+.rytbutton {
+    display: flex;
+    gap: 15px;
+    /* margin-left: 250px; */
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.buttons {
+    background-color: rgb(23, 0, 170);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons:hover {
+    transform: scale(1.1);
+    background-color: rgb(23, 0, 170);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* margin-left: 250px; */
+    width: 100%;
+    align-items: center;
+}

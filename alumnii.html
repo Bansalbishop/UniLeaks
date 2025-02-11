@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni feed</title>
+    <link rel="stylesheet" href="alumnii.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="left-main">
+        <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+        <hr class="logohr">
+        <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+        <div class="buttonlist">
+            <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Alumni memories" id="selectedlft" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Complaints" class="buttonlef"onclick="openpage('/Complaints.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Study material"  class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Upload" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+        </div>
+        
+    </div>
+
+
+
+    <div class="alumni-main">
+        <div >
+            <input class="alumni-cllg" type="search" placeholder="Enter your College name...">
+
+        </div>
+        <div class="alumni-decade">
+            <button onclick="showDiv('div1')" data-aos="flip-left" data-aos-delay="200" data-aos-duration="500" class="decadebtn">
+                1980's
+            </button>
+            <button onclick="showDiv('div2')" data-aos="flip-right" data-aos-delay="400" data-aos-duration="500" class="decadebtn">
+                1990's
+            </button>
+            <button onclick="showDiv('div3')" data-aos="flip-left" data-aos-delay="600" data-aos-duration="500" class="decadebtn">
+                2000's
+            </button>
+            <button onclick="showDiv('div4')" data-aos="flip-right" data-aos-delay="800" data-aos-duration="500" class="decadebtn">
+                2010's
+            </button>
+            <button onclick="showDiv('div5')" data-aos="flip-left" data-aos-delay="1000" data-aos-duration="500" class="decadebtn">
+                2020's
+            </button>
+            
+
+        </div>
+        <div class="divhead"><h3>Select Batch year:</h3></div>
+
+        <div id="div1" data-aos="slide-down" class="content">
+            
+            <button class="decadebtn"onclick="openpage('/gallery.html')"   >1980</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1981</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1982</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1983</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1984</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1985</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1986</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1987</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')" >1988</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1989</button>
+        </div>
+        <div id="div2" class="content">
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1990</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1991</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1992</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1993</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1994</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1995</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1996</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1997</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1998</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">1999</button>
+        </div>
+        <div id="div3" class="content">
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2000</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2001</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2002</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2003</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2004</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2005</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2006</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2007</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2008</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2009</button>
+        </div><div id="div4" class="content">
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2010</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2011</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2012</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2013</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2014</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2015</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2016</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2017</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2018</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2019</button>
+        </div>
+        <div id="div5" class="content">
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2020</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2021</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2022</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2023</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2024</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2025</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2026</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2027</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2028</button>
+            <button class="decadebtn"onclick="openpage('/gallery.html')">2029</button>
+        </div>
+
+
+    </div>
+
+
+    <script>
+    let divs = document.querySelectorAll('.content');
+divs.forEach(div => div.style.display = 'none');
+
+function showDiv(divId) {
+    // Hide all divs
+    divs.forEach(div => div.style.display = 'none');
+
+    // Get the target div
+    let targetDiv = document.getElementById(divId);
+
+    // Show the selected div
+    targetDiv.style.display = 'flex';
+
+    // Show the batch selection heading
+    document.querySelector('.divhead').style.display = 'block';
+
+    // Remove active class from all decade buttons
+    let buttons = document.querySelectorAll('.decadebtn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // Add active class to the clicked button
+    let clickedButton = document.querySelector(`button[onclick="showDiv('${divId}')"]`);
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+
+    // Remove and reapply AOS for wave effect
+    let buttonsInside = targetDiv.querySelectorAll('.decadebtn');
+    buttonsInside.forEach((btn, index) => {
+        btn.removeAttribute('data-aos'); // Remove existing animation
+        btn.style.opacity = '0'; // Hide buttons initially
+
+        setTimeout(() => {
+            btn.setAttribute('data-aos', 'fade-down'); // Add new animation
+            btn.setAttribute('data-aos-delay', `${index * 100}`); // Staggered wave effect
+            btn.style.opacity = '1'; // Show button
+            AOS.refreshHard(); // Ensure animations restart
+        }, index * 100);
+    });
+}
+
+
+
+
+
+        function openpage(url){
+            window.location.href=url;
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+</body>
+</html>

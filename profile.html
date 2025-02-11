@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+    <style>
+       
+     
+       *{
+    background-color: rgb(35, 35, 35);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+:root {
+    --pri-color: rgb(23, 0, 170) ;
+    --primary-color: rgb(71, 46, 237);
+            --text-color: #ffffff;
+            --bg-color: #000000;
+            --card-bg-color: #111111;
+            --hover-color: rgb(71, 46, 237);
+}
+
+
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            
+    display: flex;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    background-image:
+                radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
+                radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
+            background-size: 100px 100px;
+
+}
+.left-main{
+    position: fixed;
+    background-color: black;
+    /* padding: auto; */
+    width: 80px;
+    height: 100vh;
+    border-radius: 15px;
+    border-right: 2px solid rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+    }
+.logo{
+    background-color: transparent;
+    /* margin: auto; */
+    
+    
+
+}
+.logohr{
+    margin-inline: 15px ;
+
+}
+.buttonlist{
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pic{
+    background-color: transparent;
+    margin-left: 2px;
+    /* margin-top: 100px; */
+
+}
+.buttonleft{
+    width: 80px;
+    margin-block: 10px;
+    background-color: transparent;
+    padding: auto;
+}
+.buttonleft{
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    height: 70px;
+    transition:  0.5s;
+    
+}
+.buttonlef{
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    /* background: linear-gradient(to right rgba(0, 0, 0, 0),black); */
+    height: 70px;
+    transition:  0.5s;
+    
+}
+.imgleft:hover{
+    background-color: black;
+}
+
+.buttonlef:hover{
+    /* background-color: rgb(23, 0, 170); */
+    background-color: var(--pri-color);
+    cursor: pointer;
+    border-radius: 10px;
+    border-left: 5px solid white;
+    /* background: linear-gradient(to right, rgba(0,0,0,0),rgba(32, 0, 254, 1), rgba(0, 0, 0, 0)); */
+    /* background-color: linear-gradient(rgb(32,0,254,255,rgba(225, 217, 217, 0))); */
+}
+      
+
+      
+        .main-profile{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           margin-left: 400px;
+           background-image:
+                radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
+                radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
+            background-size: 100px 100px;
+        } 
+
+        .profile-card {
+            background-color: var(--card-bg-color);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(23, 0, 170, 0.3);
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-header {
+            background-color: var(--primary-color);
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--text-color);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+            background-color: transparent;
+        }
+
+        .profile-info {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .social-links {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        #selectedlft{
+    /* background-color: rgb(23, 0, 170); */
+    cursor: pointer;
+    background-color: var(--pri-color);
+    border-radius: 10px;
+    border-left: 5px solid white;
+}
+        .social-link:hover {
+            color: var(--hover-color);
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-info {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left-main">
+        <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+        <hr class="logohr">
+        <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+        <div class="buttonlist">
+            <!-- <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button> -->
+            <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+            <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+            <button title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+            <button title="Alumni memories" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+            <button title="Complaints" class="buttonlef"onclick="openpage('/Complaints.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+            <button title="Study material" class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+            <button title="Upload" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+            <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+            <button title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+        </div>
+        
+        </div>
+<div class="main-profile">
+<div class="profile-card">
+    <div class="profile-header">
+        <img src="profile img.jpg" alt="Profile Picture" data-aos="fade-down" class="profile-img">
+        <h1 data-aos="fade-up" class="profile-name">Vihaan Roy</h1>
+    </div>
+    <div class="profile-info" data-aos="flip-left" data-aos-delay="100">
+        <div class="info-item">
+            <span class="info-label">College</span>
+            Lovely Professional University
+        </div>
+        <div class="info-item" data-aos="flip-left" data-aos-delay="200">
+            <span class="info-label">Degree</span>
+             Computer Science Engineering
+        </div>
+        <div class="info-item" data-aos="flip-left" data-aos-delay="300">
+            <span class="info-label">Phone</span>
+            +91-99909990900
+        </div>
+        <div class="info-item" data-aos="flip-left" data-aos-delay="400">
+            <span class="info-label">Email</span>
+            vihaan@example.com
+        </div>
+        <div class="info-item" data-aos="flip-left" data-aos-delay="500">
+            <span class="info-label">Gender</span>
+            Male
+        </div>
+        <div class="info-item" data-aos="flip-left" data-aos-delay="600">
+            <span class="info-label">Batch</span>
+            2023
+        </div>
+        <div class="info-item" style="grid-column: span 2;" data-aos="flip-left" data-aos-delay="700">
+            <span class="info-label">About</span>
+            Passionate computer science student with a keen interest in web development and artificial intelligence.
+            Always eager to learn new technologies and solve complex problems.
+        </div>
+        <div class="social-links" data-aos="flip-left" data-aos-delay="800">
+            <a href="https://github.com/johndoe" class="social-link" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/johndoe" class="social-link" target="_blank"
+                rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/johndoe" class="social-link" target="_blank"
+                rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            function openpage(url){
+                window.location.href=url;
+            }
+          AOS.init();
+        </script>
+</body>
+
+</html>

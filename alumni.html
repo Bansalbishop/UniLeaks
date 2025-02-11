@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ALUMNI</title>
+        <link rel="stylesheet" href="ALUMNI.CSS">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+</head>
+
+<body>
+        <div class="left-main">
+                <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+        <hr class="logohr">
+        <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+                <div class="buttonlist">
+                        <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Alumni memories" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Complaints" class="buttonlef"onclick="openpage('/Complaints.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Study material"  class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Upload" id="selectedlft" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+                </div>
+
+        </div>
+        <div class="main">
+                <div class="rytbutton">
+                        <button class="buttons" onclick="openPage('/event.html')">EVENTS</button>
+                        <button class="buttons1">ALUMNI</button>
+                        <button class="buttons" onclick="openPage('/protest.html')">PROTEST</button>
+                        <button class="buttons" onclick="openPage('/study.html')">STUDY MATERIAL</button>
+                </div>
+                <div class="upload-box" data-aos="fade-up">
+                        <img src="/upload.png" alt="Image" style="height: 100px;">
+                        <label for="fileInput" class="upload-btn">Upload Here</label>
+                        <input type="file" id="fileInput" multiple accept="image/*,video/*,.pdf,.doc,.docx,.txt">
+                        <div id="fileList"></div>
+                </div>
+                <div>
+                        <form>
+                                <fieldset data-aos="fade-left">
+                                        <legend>BATCH</legend>
+                                        <label for="year"></label>
+                                        <input type="number" placeholder="YYYY" min="1999" max="2020" id="year"
+                                                width="100px">
+                                </fieldset>
+                                <fieldset data-aos="fade-right">
+                                        <legend>Hashtags</legend>
+                                        <label for="Title"></label>
+                                        <textarea placeholder="Hashtags" id="texarea" rows="2" cols="100"></textarea>
+                                </fieldset>
+
+
+                        </form>
+                </div>
+                <button class="buttons2" style="padding-top: 5px;"
+                        onclick="openPpage('/alumnii.html')">SAVE</button>
+        </div>
+
+        <script>
+                function openPage(url) {
+                        window.location.href = url;
+                        
+                }
+                function openpage(url) {
+             window.location.href = url;
+                        
+                }
+                function openPpage(url) {
+                        alert("Media added successfully.");
+                        openPage(url);
+                }
+                document.getElementById("fileInput").addEventListener("change", function (event) {
+                        let fileList = document.getElementById("fileList");
+                        fileList.innerHTML = ""; // Clear previous selection
+
+                        for (let file of event.target.files) {
+                                let listItem = document.createElement("div");
+                                listItem.classList.add("file-preview");
+
+                                // If file is an image
+                                if (file.type.startsWith("image/")) {
+                                        let img = document.createElement("img");
+                                        img.src = URL.createObjectURL(file);
+                                        img.onload = () => URL.revokeObjectURL(img.src);
+                                        listItem.appendChild(img);
+                                }
+                                // If file is a video
+                                else if (file.type.startsWith("video/")) {
+                                        let video = document.createElement("video");
+                                        video.src = URL.createObjectURL(file);
+                                        video.controls = true;
+                                        video.onload = () => URL.revokeObjectURL(video.src);
+                                        listItem.appendChild(video);
+                                }
+                                // For other file types
+                                else {
+                                        let fileInfo = document.createElement("p");
+                                        fileInfo.textContent = `📄 ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+                                        listItem.appendChild(fileInfo);
+                                }
+
+                                fileList.appendChild(listItem);
+                        }
+                });
+
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        
+
+</body>
+
+</html>

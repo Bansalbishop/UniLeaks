@@ -1,0 +1,319 @@
+* {
+    background-color: rgb(35, 35, 35);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+:root {
+    --pri-color: rgb(23, 0, 170);
+
+}
+
+#selectedlft{
+    /* background-color: rgb(23, 0, 170); */
+    cursor: pointer;
+    background-color: var(--pri-color);
+    border-radius: 10px;
+    border-left: 5px solid white;
+}
+
+
+body {
+    display: flex;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+
+}
+
+.left-main {
+    position: fixed;
+    background-color: black;
+    /* padding: auto; */
+    width: 80px;
+    height: 100vh;
+    border-radius: 15px;
+    border-right: 2px solid rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    background-color: transparent;
+    /* margin: auto; */
+
+
+
+}
+
+.logohr {
+    margin-inline: 15px;
+
+}
+
+.buttonlist {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pic {
+    background-color: transparent;
+    margin-left: 2px;
+    /* margin-top: 100px; */
+
+}
+
+.buttonleft {
+    width: 80px;
+    margin-block: 10px;
+    background-color: transparent;
+    padding: auto;
+}
+
+.buttonleft {
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    height: 70px;
+    transition: 0.5s;
+
+}
+
+.buttonlef {
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    /* background: linear-gradient(to right rgba(0, 0, 0, 0),black); */
+    height: 70px;
+    transition: 0.5s;
+
+}
+
+.imgleft:hover {
+    background-color: black;
+}
+
+.buttonlef:hover {
+    /* background-color: rgb(23, 0, 170); */
+    background-color: var(--pri-color);
+    cursor: pointer;
+    border-radius: 10px;
+    border-left: 5px solid white;
+    /* background: linear-gradient(to right, rgba(0,0,0,0),rgba(32, 0, 254, 1), rgba(0, 0, 0, 0)); */
+    /* background-color: linear-gradient(rgb(32,0,254,255,rgba(225, 217, 217, 0))); */
+}
+
+.rytbutton button {
+    border: none;
+    background-color: gray;
+    padding: px;
+    border-radius: 20px;
+    padding-inline: 25px;
+    padding-block: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-left: 100px;
+}
+
+.buttons {
+    background-color: grey;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+
+.rytbutton {
+    display: flex;
+    gap: 15px;
+    /* margin-left: 250px; */
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.buttons {
+    background-color: rgb(23, 0, 170);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons:hover {
+    transform: scale(1.1);
+    background-color: rgb(23, 0, 170);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttons1 {
+    background-color: rgb(23, 0, 170) !important;
+    color: white;
+    transform: scale(1.1);
+}
+
+.upload-box {
+    width: 33vw;
+    /* 1/3rd of the viewport width */
+    height: 33vh;
+    /* 1/3rd of the viewport height */
+    background-color: black;
+    border: 3px dotted white;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Upload button styling */
+.upload-btn {
+    transition: 0.3s;
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.upload-btn:hover {
+    background-color: #080808;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* File list styling */
+#fileList {
+    margin-top: 15px;
+    font-size: 14px;
+    max-width: 90%;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+/* File preview styles */
+.file-preview {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.file-preview img,
+.file-preview video {
+    max-width: 80px;
+    max-height: 80px;
+    margin: 5px;
+    display: block;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* margin-left: 250px; */
+    width: 100%;
+    align-items: center;
+}
+
+.upload-box img {
+    background-color: transparent;
+}
+
+fieldset {
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 2cqh;
+    /* padding-right: 50px; */
+}
+
+fieldset:hover {
+    border-color: 1px solid #4CAF50;
+}
+
+legend {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    /* padding: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: none;
+    /* margin-right: 20px; */
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    border: none;
+}
+
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buttons2 {
+    background-color: #4CAF50;
+    margin-bottom: 40px;
+}
+
+.buttons2 {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons2:hover {
+    transform: scale(1.1);
+    background-color: #4CAF50;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

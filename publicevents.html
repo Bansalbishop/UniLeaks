@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLeaks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="publicevents.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head
+<body>
+    <div class="main">
+        <div class="left-main">
+            <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+            <hr class="logohr">
+            <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+            <div class="buttonlist">
+                <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button title="Events" id="selectedlft" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Alumni memories"  class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Complaints" class="buttonlef"onclick="openpage('/protest.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Study material" class="buttonlef"onclick="openpage('/study.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Upload" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+            </div>
+            
+        </div>
+
+        <div class="right-main">
+    
+            <div class="rytbutton">
+                <input type="search" name="searchbox" id="search-box" placeholder="Search Here...">;
+                <button id="selected" onclick="openpage('/publicevents.html')">Public</button>
+                <button onclick="openpage('/privateevents.html')">Private</button>
+            </div>
+
+
+            <div class="eventspagepvt" >
+                <div class="eventpost"data-aos="fade-up">
+                    <div><img src="/ig event 1.jpg" alt="" width="400px"></div>
+                    <div class="postcontent">
+                        <div><h2>Taarangana</h2></div>
+                        <div>IGDTUW</div>
+                        
+                        <div class="postschedule">
+                            <div>28 Mar 2025</div>
+                            <div>10:30 </div>
+                        </div>
+                        <div><p>TAARANGANA is a vibrant college fest celebrating music, dance, art, culture, and youthful creativity.</p></div>
+                        <div>
+                            <button class="post-mark-button" onclick="markevent(this)">MARK</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="eventpost"data-aos="fade-up">
+                    <div><img src="/ch event1.jpg" alt="" width="400px"></div>
+                    <div class="postcontent">
+                        <div><h2>Talent hunt 3.0</h2></div>
+                        <div>Chitkara University</div>
+                        
+                        <div class="postschedule">
+                            <div>5 Feb 2025</div>
+                            <div>11:00</div>
+                        </div>
+                        <div><p>Talent Hunt 3.0: A thrilling college competition showcasing skills in music, dance, drama, and creativity.</p></div>
+                        <div>
+                            <button class="post-mark-button" onclick="markevent(this)">MARK</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="eventpost"data-aos="fade-up">
+                    <div><img src="/ch event 2.jpg" alt="" width="400px"></div>
+                    <div class="postcontent">
+                        <div><h2>Talent hunt 3.0</h2></div>
+                        <div>Chitkara University</div>
+                        
+                        <div class="postschedule">
+                            <div>25 May 2025</div>
+                            <div>17:00</div>
+                        </div>
+                        <div><p>Tech Convergence: A college fest celebrating innovation, technology, and creativity through workshops, competitions, and exhibitions.</p></div>
+                        <div>
+                            <button class="post-mark-button" onclick="markevent(this)">MARK</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="eventpost"data-aos="fade-up">
+                    <div><img src="/ig event 2.jpg" alt="" width="400px"></div>
+                    <div class="postcontent">
+                        <div><h2>Project Khajoor</h2></div>
+                        <div>IGDTUW</div>
+                        
+                        <div class="postschedule">
+                            <div>15 Apr 2025</div>
+                            <div>14:15</div>
+                        </div>
+                        <div><p>The event highlights a special brewing experience centered around dates (khajoor), hinting at a unique and healthy twist to beverages.</p></div>
+                        <div>
+                            <button class="post-mark-button" onclick="markevent(this)">MARK</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="eventpost"data-aos="fade-up">
+                    <div><img src="/ig event 3.jpg" alt="" width="400px"></div>
+                    <div class="postcontent">
+                        <div><h2>PitchDesk</h2></div>
+                        <div>IGDTUW</div>
+                        
+                        <div class="postschedule">
+                            <div>2 Mar 2025</div>
+                            <div>13:00</div>
+                        </div>
+                        <div><p>PitchDesk: A business plan competition to showcase ideas, gain mentorship, impress investors, and win rewards.</p></div>
+                        <div>
+                            <button class="post-mark-button" onclick="markevent(this)">MARK</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="eventpost"data-aos="fade-up">
+                    <div><img src="/ch event 3.jpg" alt="" width="400px"></div>
+                    <div class="postcontent">
+                        <div><h2>Future Fest</h2></div>
+                        <div>Chitkara University</div>
+                        
+                        <div class="postschedule">
+                            <div>01 Aug 2025</div>
+                            <div>10:00</div>
+                        </div>
+                        <div><p>FutureFest: Transforming ideas into innovations through technology, creativity, entrepreneurship, and groundbreaking solutions for tomorrow.</p></div>
+                        <div>
+                            <button class="post-mark-button" onclick="markevent(this)">MARK</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="eventpost"data-aos="fade-up">
+                    <div><img src="/ch event 4.jpg" alt="" width="400px"></div>
+                    <div class="postcontent">
+                        <div><h2>Transformer Odeyssey</h2></div>
+                        <div>Chitkara University</div>
+                        
+                        <div class="postschedule">
+                            <div>02 July 2025</div>
+                            <div>11:00</div>
+                        </div>
+                        <div><p>Transformer Odyssey: Code the future with innovation, AI, technology, and groundbreaking programming challenges.</p></div>
+                        <div>
+                            <button class="post-mark-button" onclick="markevent(this)">MARK</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+                
+            
+            </div>
+                
+                
+            </div>
+        </div>
+        <div class="rytmostmain">
+            <div><h3>EVENTS</h3></div>
+            <div class="scheduler" id="schedule"></div>
+        </div>
+
+    </div>
+    <script>
+        function openaboutus(){
+        let y=location.assign("http://127.0.0.1:3000/index.html");
+        }
+        function openhome(){
+        let y=location.assign("http://127.0.0.1:3000/main.html");
+        }
+        function openpage(url){
+            window.location.href=url;
+        }
+    </script>
+    <script src="schedular.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+    
+</body>
+</html>

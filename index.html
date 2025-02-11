@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+    body::-webkit-scrollbar {
+    display: none;
+  
+  }
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            color: #e0e0e0;
+            background-color: #000;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #001f3f, #0a2a43, #003366);
+            z-index: -1;
+        }
+
+        .container {
+            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .quote {
+            font-size: 45px;
+            font-weight: 900;
+            white-space: nowrap;
+            opacity: 0;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8)
+                /* Sky blue with transparency */
+                , 0 0 30px rgba(255, 255, 255, 0.6);
+            position: absolute;
+            top: 30%;
+            left: -140%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes walkInAndOut {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            20% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            80% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+
+        #ready-text {
+            font-size: 120px;
+            font-weight:400;
+            top: 90%;
+    transform: translateY(110%);
+            color: white;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            text-shadow: 0 0 25px white;
+        }
+
+        #login-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 30px;
+            background-color: rgba(10, 42, 67, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #login-box input,
+        #login-box button {
+            padding: 15px;
+            font-size: 20px;
+            border: 1px solid #00bfff;
+            border-radius: 4px;
+            background-color: rgba(0, 31, 63, 0.5);
+            color: #e0e0e0;
+        }
+
+        #login-box input::placeholder {
+            color: #a0a0a0;
+        }
+
+        #login-box button {
+            background-color: #00bfff;
+            color: #001f3f;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #login-box p {
+            color: #00bfff;
+        }
+
+        #login-box button:hover {
+            background-color: #33ccff;
+        }
+
+        .hidden {
+            display: none;
+        }
+        .new-user{
+            text-decoration: none;
+            color:white;
+            
+        }
+        .new-user:focus{
+color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background"></div>
+    <div class="container">
+        <div id="quote-container">
+            <p id="quote1" class="quote">The campus underground – where real updates happen.</p>
+            <p id="quote2" class="quote">No admin. No restrictions. Just students.</p>
+        </div>
+        <div id="ready-text" class="hidden">READY</div>
+        <div id="login-box" class="hidden">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button onclick="openpage('/main.html')">Login</button>
+            <p>
+                <a class="new-user" href="register.html">New user? Sign Up</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const quote1 = document.getElementById("quote1")
+            const quote2 = document.getElementById("quote2")
+            const readyText = document.getElementById("ready-text")
+            const loginBox = document.getElementById("login-box")
+
+            function animateQuote(quote, delay) {
+                setTimeout(() => {
+                    quote.style.animation = "walkInAndOut 6s ease-in-out forwards"
+                }, delay)
+            }
+
+            // Animate first quote
+            animateQuote(quote1, 0)
+
+            // Animate second quote after a delay
+            animateQuote(quote2, 6000)
+
+            // Show READY text
+            setTimeout(() => {
+                readyText.classList.remove("hidden")
+                readyText.style.opacity = 1
+            }, 12000)
+
+            // Hide READY text and show login box
+            setTimeout(() => {
+                readyText.style.opacity = 0
+                setTimeout(() => {
+                    readyText.classList.add("hidden")
+                    loginBox.classList.remove("hidden")
+                    loginBox.style.opacity = 1
+                }, 1000)
+            }, 15000)
+        })
+
+
+        function openpage(url){
+            window.location.href=url;
+        }
+    </script>
+</body>
+
+</html>

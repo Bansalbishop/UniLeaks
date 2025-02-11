@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EVENTS</title>
+        <link rel="stylesheet" href="upload.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+        <div class="left-main">
+                <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+        <hr class="logohr">
+        <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+                <div class="buttonlist">
+                        <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Alumni memories" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Complaints" class="buttonlef"onclick="openpage('/Complaints.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Study material"  class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Upload" id="selectedlft" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+                </div>
+
+        </div>
+        <div class="rytbutton">
+                <button class="buttons" data-aos="slide-down" data-aos-delay="100" onclick="openPage('/event.html')">EVENTS</button>
+                <button class="buttons" data-aos="slide-down" data-aos-delay="200" onclick="openPage('/alumni.html')">ALUMNI</button>
+                <button class="buttons" data-aos="slide-down" data-aos-delay="300" onclick="openPage('/protest.html')">PROTEST</button>
+                <button class="buttons" data-aos="slide-down" data-aos-delay="400" onclick="openPage('/study.html')">STUDY MATERIAL</button>
+        </div>
+        
+        <script>
+                function openPage(url) {
+                        window.location.href = url;
+                }
+                function openpage(url) {
+             window.location.href = url;
+                        
+                }
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        
+</body>
+
+</html>

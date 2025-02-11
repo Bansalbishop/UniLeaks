@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+    <style>
+        
+        
+*{
+    background-color: rgb(35, 35, 35);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+
+:root {
+    --pri-color: rgb(23, 0, 170) ;
+    
+}
+
+
+
+body{
+    display: flex;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+
+}
+.left-main{
+    position: fixed;
+    background-color: black;
+    /* padding: auto; */
+    width: 80px;
+    height: 100vh;
+    border-radius: 15px;
+    border-right: 2px solid rgb(3, 3, 3);
+    display: flex;
+    flex-direction: column;
+    }
+.logo{
+    background-color: transparent;
+    /* margin: auto; */
+    
+    
+
+}
+.logohr{
+    margin-inline: 15px ;
+
+}
+.buttonlist{
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pic{
+    background-color: transparent;
+    margin-left: 2px;
+    /* margin-top: 100px; */
+
+}
+.buttonleft{
+    width: 80px;
+    margin-block: 10px;
+    background-color: transparent;
+    padding: auto;
+}
+.buttonleft{
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    height: 70px;
+    transition:  0.5s;
+    
+}
+.buttonlef{
+    text-decoration: none;
+    border: none;
+    width: 80px;
+    /* margin-left: 20px; */
+    /* margin-block: 20px; */
+    background-color: black;
+    /* background: linear-gradient(to right rgba(0, 0, 0, 0),black); */
+    height: 70px;
+    transition:  0.5s;
+    
+}
+.imgleft:hover{
+    background-color: black;
+}
+
+.buttonlef:hover{
+    /* background-color: rgb(23, 0, 170); */
+    background-color: var(--pri-color);
+    cursor: pointer;
+    border-radius: 10px;
+    border-left: 5px solid white;
+    /* background: linear-gradient(to right, rgba(0,0,0,0),rgba(32, 0, 254, 1), rgba(0, 0, 0, 0)); */
+    /* background-color: linear-gradient(rgb(32,0,254,255,rgba(225, 217, 217, 0))); */
+}
+body::-webkit-scrollbar {
+    display: none;
+  
+  }
+       .main-content {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left:140px;
+            padding: 0;
+            background:transparent;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slider-container {
+            height:400px;
+            width: 90%;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .slider {
+            
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            display: flex;
+            min-width: 100%;
+            align-items: center;
+            /* background:  rgb(23, 0, 170); */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .qr-code {
+height:250px;
+            width: 35%;
+            padding: 15px;
+            /* background-color: rgb(69, 47, 211); */
+            border-radius: 10px;
+        }
+
+        .slide-image {
+            height:250px;
+            width: 70%;
+            object-fit: cover;
+        }
+
+        .product-container {
+            /* margin-left:-400px; */
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+           margin-top: -130px;
+            width: 100%;
+            align-items: center;
+
+        }
+
+        .product-card {
+            height:340px;
+            width: 250px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-right: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 180px;
+            height: 150px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+.product-description strong{
+    display: block;
+    margin-block: 5px;
+    background-color: transparent;
+}
+        .product-description {
+            margin: 10px 0;
+            color: #e0e0e0;
+            font-size: 14px;
+            background-color: transparent;
+        }
+        #selectedlft{
+    /* background-color: rgb(23, 0, 170); */
+    cursor: pointer;
+    background-color: var(--pri-color);
+    border-radius: 10px;
+    border-left: 5px solid white;
+}
+        .add-victim-btn {
+            background:rgb(23, 0, 170);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top:5px;
+        }
+
+        .add-victim-btn:hover {
+            background: #472eed;
+            transform: scale(1.05);
+        }
+
+        .add-victim-btn:disabled {
+            background: #555;
+            cursor: not-allowed;
+            transform: none;
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+ 
+        <div class="left-main">
+            <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+    <hr class="logohr">
+    <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+            <div class="buttonlist">
+                <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Alumni memories" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Complaints" id="selectedlft" class="buttonlef"onclick="openpage('/Complaints.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Study material" class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Upload" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+            </div>
+
+    </div>
+
+<div class="main-content">
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.NDKNbQ-I9ApLLVp-E6HSPwHaHa&pid=Api&P=0&h=180" alt="QR Code 1" class="qr-code">
+                <img src="/Screenshot (255).png" alt="Image 1" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.NDKNbQ-I9ApLLVp-E6HSPwHaHa&pid=Api&P=0&h=180" alt="QR Code 2" class="qr-code">
+                <img src="/Screenshot (256).png" alt="Image 2" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.NDKNbQ-I9ApLLVp-E6HSPwHaHa&pid=Api&P=0&h=180" alt="QR Code 1" class="qr-code">
+                <img src="/1.jpg" alt="Image 1" class="slide-image">
+            </div>
+            <div class="slide">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.NDKNbQ-I9ApLLVp-E6HSPwHaHa&pid=Api&P=0&h=180" alt="QR Code 1" class="qr-code">
+                <img src="event 5.jpg" alt="Image 1" class="slide-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-card" data-aos="flip-right" data-aos-delay="100" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.kyHHCj1YYF7Uzd84LGhrxQHaFj&pid=Api&P=0&h=180" alt="Product 1" class="product-image">
+            <p class="product-description">
+                This protest advocates for affordable education and fights against the steep fee hikes imposed by the college administration. We demand affordable education!
+                <strong>Students vs College Administration</strong> </p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="200" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.u24sAO481nw9adnpjKHJ8gHaFV&pid=Api&P=0&h=180" alt="Product 2" class="product-image">
+            <p class="product-description">
+                This protest is centered around challenging the unfair rules and regulations imposed by the college.
+                Fighting for student rights! 
+                <strong>Students vs Unjust Policies</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="300" data-aos-duration="300">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.7EbO-jTCTPhlaNZzu8QAVQHaE8&pid=Api&P=0&h=180" alt="Product 3" class="product-image">
+            <p class="product-description">
+                This protest addresses the need for improved facilities and support from the college administration.
+                Fighting for better facilities and support from the college.
+                <strong>Academics vs Administration</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="400" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.kyHHCj1YYF7Uzd84LGhrxQHaFj&pid=Api&P=0&h=180" alt="Product 1" class="product-image">
+            <p class="product-description">
+                This protest advocates for affordable education and fights against the steep fee hikes imposed by the college administration. We demand affordable education!
+                <strong>Students vs College Administration</strong> </p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="500" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.u24sAO481nw9adnpjKHJ8gHaFV&pid=Api&P=0&h=180" alt="Product 2" class="product-image">
+            <p class="product-description">
+                This protest is centered around challenging the unfair rules and regulations imposed by the college.
+                Fighting for student rights! 
+                <strong>Students vs Unjust Policies</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="600" data-aos-duration="300">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.7EbO-jTCTPhlaNZzu8QAVQHaE8&pid=Api&P=0&h=180" alt="Product 3" class="product-image">
+            <p class="product-description">
+                This protest addresses the need for improved facilities and support from the college administration.
+                Fighting for better facilities and support from the college.
+                <strong>Academics vs Administration</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="700" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.kyHHCj1YYF7Uzd84LGhrxQHaFj&pid=Api&P=0&h=180" alt="Product 1" class="product-image">
+            <p class="product-description">
+                This protest advocates for affordable education and fights against the steep fee hikes imposed by the college administration. We demand affordable education!
+                <strong>Students vs College Administration</strong> </p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="800" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.u24sAO481nw9adnpjKHJ8gHaFV&pid=Api&P=0&h=180" alt="Product 2" class="product-image">
+            <p class="product-description">
+                This protest is centered around challenging the unfair rules and regulations imposed by the college.
+                Fighting for student rights! 
+                <strong>Students vs Unjust Policies</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="600" data-aos-duration="300">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.7EbO-jTCTPhlaNZzu8QAVQHaE8&pid=Api&P=0&h=180" alt="Product 3" class="product-image">
+            <p class="product-description">
+                This protest addresses the need for improved facilities and support from the college administration.
+                Fighting for better facilities and support from the college.
+                <strong>Academics vs Administration</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="700" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.kyHHCj1YYF7Uzd84LGhrxQHaFj&pid=Api&P=0&h=180" alt="Product 1" class="product-image">
+            <p class="product-description">
+                This protest advocates for affordable education and fights against the steep fee hikes imposed by the college administration. We demand affordable education!
+                <strong>Students vs College Administration</strong> </p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="800" data-aos-duration="300">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.u24sAO481nw9adnpjKHJ8gHaFV&pid=Api&P=0&h=180" alt="Product 2" class="product-image">
+            <p class="product-description">
+                This protest is centered around challenging the unfair rules and regulations imposed by the college.
+                Fighting for student rights! 
+                <strong>Students vs Unjust Policies</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+        <div class="product-card" data-aos="flip-right" data-aos-delay="900" data-aos-duration="300">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.7EbO-jTCTPhlaNZzu8QAVQHaE8&pid=Api&P=0&h=180" alt="Product 3" class="product-image">
+            <p class="product-description">
+                This protest addresses the need for improved facilities and support from the college administration.
+                Fighting for better facilities and support from the college.
+                <strong>Academics vs Administration</strong></p>
+            <button class="add-victim-btn">Add as Victim</button>
+        </div>
+    </div>
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlider();
+            }
+
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            setInterval(nextSlide, 4000);
+
+            document.querySelectorAll('.add-victim-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    this.disabled = true;
+                    this.textContent = 'Added';
+                });
+            });
+        });
+        function openpage(url){
+            window.location.href=url;
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

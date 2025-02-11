@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLeaks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/> -->
+</head>
+<body>
+    <div class="main">
+        <div class="left-main" >
+            <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+            <hr class="logohr">
+            <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+            <div class="buttonlist">
+                <button data-aos="fade-up" title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button data-aos="fade-down"title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button data-aos="fade-up"title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button data-aos="fade-down"title="Alumni memories" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button data-aos="fade-up"title="Complaints" class="buttonlef"onclick="openpage('/protest.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button data-aos="fade-down"title="Study material" class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button data-aos="fade-up"title="Upload" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button data-aos="fade-down"title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button data-aos="fade-up"title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+            </div>
+            
+        </div>
+        <div class="right-main">
+    
+            <div class="rytbutton">
+                <button data-aos="zoom-in-down" onclick="openpage('/publicevents.html')">Public</button>
+                <button data-aos="zoom-in-down" onclick="openpage('/privateevents.html')">Private</button>
+            </div>
+            <div class="chillsection">
+                <div><img src="/5214627-removebg-preview.png"></div>
+                <div class="chill-text">Maybe it's just a Beginning</div>
+            </div>
+        </div>
+        <div class="rytmostmain" data-aos="slide-left">
+            <div><h3>EVENTS</h3></div>
+            <div class="scheduler" id="schedule"></div>
+        </div>
+    </div>
+
+    <script src="schedular.js"></script>
+    
+    <script>
+        function openaboutus(){
+        let y=location.assign("http://127.0.0.1:3000/index.html");
+    }
+    function openpage(url){
+        window.location.href=url;
+    }
+
+    
+
+
+    
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+   
+    
+    
+</body>
+</html>

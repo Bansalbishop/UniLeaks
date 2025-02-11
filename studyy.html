@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDY MATERIAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+    <link rel="stylesheet" href="studymaterial.css">
+</head>
+
+<body>
+    <div class="left-main">
+        <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+        <hr class="logohr">
+        <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+        <div class="buttonlist">
+            <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Alumni memories" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Complaints" class="buttonlef"onclick="openpage('/Complaints.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Study material" id="selectedlft" class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Upload" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Settings" class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-bar" id="search" placeholder="Search for a college...">
+        <div class="mid">
+            <input type="text" class="search-bar" id="search" placeholder="Degree">
+            <input type="text" class="search-bar mid2" id="search" placeholder="Branch">
+        </div>
+        <input type="number" class="search-bar" id="search1" placeholder="Semester(1-8)" min="1" max="8"
+            oninput="showSemesterDetails()">
+        <button class="buttons2" onclick="redirect()">Go</button>
+    </div>
+    </div>
+
+    <script>
+        function searchCollege() {
+            let query = document.getElementById("search").value;
+            if (query) {
+                alert("Searching for: " + query);
+                // Implement actual search logic here
+            }
+        }
+        document.getElementById("search1").value = localStorage.getItem("semester") || "";
+        function redirect() {
+            let semester = document.getElementById("search1").value;
+            if (semester >= 1 && semester <= 8) {
+                localStorage.setItem("semester", semester); // Save semester in localStorage
+                window.location.href = semester + ".html"; // Redirect
+            } else {
+                alert("Please enter a valid semester (1-8)");
+            }
+        }
+        function openpage(url) {
+             window.location.href = url;
+                        
+                }
+
+    </script>
+</body>
+
+</html>

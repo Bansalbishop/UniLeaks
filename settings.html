@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            /* background-color: rgb(35, 35, 35); */
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+
+        :root {
+            --pri-color: rgb(23, 0, 170);
+            --primary-color: rgba(74, 48, 244, 0.957);
+            --text-color: #ffffff;
+            --bg-color: #000000;
+            --card-bg-color: #111111;
+            --hover-color: rgb(43, 20, 190);
+            --input-bg-color: #222222;
+            --input-border-color: #333333;
+        }
+
+
+
+        body {
+            display: flex;
+            /* overflow: hidden; */
+            overflow-x: hidden;
+
+        }
+
+        .left-main {
+            position: fixed;
+            background-color: black;
+            /* padding: auto; */
+            width: 80px;
+            height: 100vh;
+            border-radius: 15px;
+            border-right: 2px solid rgb(3, 3, 3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            background-color: transparent;
+            /* margin: auto; */
+
+
+
+        }
+
+        .logohr {
+            margin-inline: 15px;
+
+        }
+
+        .buttonlist {
+            display: flex;
+            background-color: black;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pic {
+            background-color: transparent;
+            margin-left: 2px;
+            /* margin-top: 100px; */
+
+        }
+
+        .buttonleft {
+            width: 80px;
+            margin-block: 10px;
+            background-color: transparent;
+            padding: auto;
+        }
+
+        .buttonleft {
+            text-decoration: none;
+            border: none;
+            width: 80px;
+            /* margin-left: 20px; */
+            /* margin-block: 20px; */
+            background-color: black;
+            height: 70px;
+            transition: 0.5s;
+
+        }
+
+        .buttonlef {
+            text-decoration: none;
+            border: none;
+            width: 80px;
+
+            background-color: black;
+            height: 70px;
+            transition: 0.5s;
+
+        }
+
+        .imgleft:hover {
+            background-color: black;
+        }
+
+        .buttonlef:hover {
+            background-color: rgb(23, 0, 170);
+            background-color: var(--pri-color);
+            cursor: pointer;
+            border-radius: 10px;
+            border-left: 5px solid white;
+            /* background: linear-gradient(to right, rgba(0,0,0,0),rgba(32, 0, 254, 1), rgba(0, 0, 0, 0)); */
+            /* background-color: linear-gradient(rgb(32,0,254,255,rgba(225, 217, 217, 0))); */
+        }
+
+
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            background-image:
+                radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2%, transparent 0%),
+                radial-gradient(circle at 75px 75px, rgba(255, 255, 255, 0.2) 2%, transparent 0%);
+            background-size: 100px 100px;
+        }
+
+        .settings-container {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            max-height: 550px;
+            margin: 6rem auto;
+            background-color: var(--card-bg-color);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 5px 15px 20px rgba(21, 20, 31, 0.877);
+        }
+
+
+        .sidebar {
+            width: 250px;
+            background-color: var(--primary-color);
+            padding: 2rem;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar button {
+            background-color: rgba(74, 48, 244, 0.957);
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: left;
+            width: 100%;
+            padding: 0.5rem;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .sidebar button:hover,
+        .sidebar button.active {
+            background-color: var(--hover-color);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 2rem;
+        }
+
+        .settings-section {
+            display: none;
+        }
+
+        .settings-section.active {
+            display: block;
+        }
+
+        h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            color: rgba(74, 108, 243, 0.957);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group #theme-select {
+            margin-bottom: 5px;
+            margin-bottom: 5px;
+            height: 40px;
+            width: 130px;
+            border-radius: 5px;
+            background-color: rgb(243, 243, 247);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--input-border-color);
+            background-color: var(--input-bg-color);
+            color: var(--text-color);
+        }
+
+        button[type="submit"] {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--hover-color);
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        #selectedlft{
+    /* background-color: rgb(23, 0, 170); */
+    cursor: pointer;
+    background-color: var(--pri-color);
+    border-radius: 10px;
+    border-left: 5px solid white;
+}
+        input:checked+.slider {
+            background-color: var(--primary-color);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left-main">
+        <!-- <div class="leftslab logo"><img src="/logo.jpg" alt="" width="75px"></div>
+        <hr class="logohr">
+        <div class="leftslab pic"><img src="profile img.jpg" alt="" width="75px" style="padding-left: auto; padding-right: auto;"></div> -->
+        <div class="buttonlist">
+            <button title="Home" class="buttonleft imgleft" onclick="openpage('/publicevents.html')"><img src="/logo.jpg" alt="" width="60px"></button>
+                <button title="Profile" class="buttonleft imgleft"onclick="openpage('/profile.html')"><img src="profile img.jpg" alt="" width="60px" style="padding-left: auto; padding-right: auto;"></button>
+                <button title="Events" class="buttonlef"  onclick="openpage('/privateevents.html')"><i class="fa-brands fa-studiovinari fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Alumni memories" class="buttonlef"onclick="openpage('/alumnii.html')"><i class="fa-solid fa-graduation-cap fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Complaints" class="buttonlef"onclick="openpage('/Complaints.html')"><i class="fa-solid fa-user-shield fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Study material"  class="buttonlef"onclick="openpage('/studyy.html')"><i class="fa-solid fa-book fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Upload" class="buttonlef"onclick="openpage('/upload.html')"><i class="fa-solid fa-upload fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="About us" class="buttonlef" onclick="openpage('/aboutuss.html')"><i class="fa-solid fa-address-card fa-2xl" style="color: #ffffff;"></i></button>
+                <button title="Settings" id="selectedlft"  class="buttonlef" onclick="openpage('/settings.html')"><i class="fa-solid fa-gear fa-2xl" style="color: #ffffff;"></i></button>
+            
+        </div>
+
+    </div>
+    <div class="settings-container">
+        <aside class="sidebar">
+            <h2>Settings</h2>
+            <ul>
+                <li><button data-aos="fade-left" data-aos-delay="100" class="nav-button active" data-target="account">Account</button></li>
+                <li><button data-aos="fade-left" data-aos-delay="200" class="nav-button" data-target="password">Password</button></li>
+                <li><button data-aos="fade-left" data-aos-delay="300" class="nav-button" data-target="notifications">Notifications</button></li>
+                <li><button data-aos="fade-left" data-aos-delay="400" class="nav-button" data-target="social">Social Links</button></li>
+                <li><button data-aos="fade-left" data-aos-delay="500" class="nav-button" data-target="privacy">Privacy</button></li>
+                <li><button data-aos="fade-left" data-aos-delay="600" class="nav-button" data-target="theme">Theme</button></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section id="account" class="settings-section active">
+                <h3>Account Settings</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input data-aos="flip-down" data-aos-delay="100" type="text" id="name" name="name" value="Vihaan Roy">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input data-aos="flip-down" data-aos-delay="100" type="email" id="email" name="email" value="vihaan@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-picture">Profile Picture</label>
+                        <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
+                    </div>
+                    <button data-aos="fade-up" data-aos-delay="100" type="submit">Save Changes</button>
+                </form>
+            </section>
+            <section id="password" class="settings-section">
+                <h3>Change Password</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" name="current-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" name="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password">
+                    </div>
+                    <button type="submit">Change Password</button>
+                </form>
+            </section>
+            <section id="notifications" class="settings-section">
+                <h3>Notification Settings</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <label>Email Notifications</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label>Push Notifications</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <label>SMS Notifications</label>
+                    </div>
+                    <button type="submit">Save Preferences</button>
+                </form>
+            </section>
+            <section id="social" class="settings-section">
+                <h3>Social Links</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="github">GitHub</label>
+                        <input type="text" id="github" name="github" value="https://github.com/vihaanroy">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn</label>
+                        <input type="text" id="linkedin" name="linkedin" value="https://www.linkedin.com/in/vihaanroy">
+                    </div>
+                    <div class="form-group">
+                        <label for="instagram">Instagram</label>
+                        <input type="text" id="instagram" name="instagram" value="https://www.instagram.com/vihaanroy">
+                    </div>
+                    <button type="submit">Update Social Links</button>
+                </form>
+            </section>
+            <section id="privacy" class="settings-section">
+                <h3>Privacy Settings</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <label>Make profile public</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label>Show email address</label>
+                    </div>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <label>Allow search engines to index my profile</label>
+                    </div>
+                    <button type="submit">Save Privacy Settings</button>
+                </form>
+            </section>
+            <section id="theme" class="settings-section">
+                <h3>Theme Settings</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="theme-select">Choose Theme</label>
+                        <select id="theme-select" name="theme">
+                            <option value="dark">Dark (Current)</option>
+                            <option value="light">Light</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </div>
+                    <button type="submit">Apply Theme</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const settingsSections = document.querySelectorAll('.settings-section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    settingsSections.forEach(section => {
+                        if (section.id === target) {
+                            section.classList.add('active');
+                        } else {
+                            section.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+
+
+        function openpage(url){
+            window.location.href=url;
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>
